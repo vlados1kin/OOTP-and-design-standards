@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Лабораторная работа 2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    ГРАФИЧЕСКИЙ РЕДАКТОР
+</header>
+<div class="shape">
+    <div class="menu">
+        <table>
+            <tr>
+                <td class="td-head">СОЗДАНИЕ<br>ФИГУРЫ</td>
+            </tr>
+            <tr>
+                <td>
+                    <select id="figure">
+                        <option value="parallelogram">Параллелограмм</option>
+                        <option value="rectangle">Прямоугольник</option>
+                        <option value="square">Квадрат</option>
+                        <option value="rhombus">Ромб</option>
+                        <option value="triangle">Треугольник</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><input id="bottomSide" placeholder="Нижняя сторона"></td>
+            </tr>
+            <tr>
+                <td><input id="leftSide" placeholder="Левая сторона"></td>
+            </tr>
+            <tr>
+                <td>
+                    <input id="angle" placeholder="Угол">
+                </td>
+            </tr>
+            <tr>
+                <td><button id="clear">Очистить</button></td>
+            </tr>
+        </table>
+    </div>
+    <div class="svg">
+        <svg id="svg"></svg>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

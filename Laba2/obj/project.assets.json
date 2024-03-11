@@ -1,0 +1,95 @@
+{
+  "version": 3,
+  "targets": {
+    "net8.0": {
+      "Laba1/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/Laba1.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Laba1.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      }
+    }
+  },
+  "libraries": {
+    "Laba1/1.0.0": {
+      "type": "project",
+      "path": "../Laba1/Laba1.csproj",
+      "msbuildProject": "../Laba1/Laba1.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net8.0": [
+      "Laba1 >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\vladislav\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "D:\\BSUIR\\course-2\\OOTPnSP\\Laba2\\Laba2.csproj",
+      "projectName": "Laba2",
+      "projectPath": "D:\\BSUIR\\course-2\\OOTPnSP\\Laba2\\Laba2.csproj",
+      "packagesPath": "C:\\Users\\vladislav\\.nuget\\packages\\",
+      "outputPath": "D:\\BSUIR\\course-2\\OOTPnSP\\Laba2\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\vladislav\\AppData\\Roaming\\NuGet\\NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "net8.0"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "projectReferences": {
+            "D:\\BSUIR\\course-2\\OOTPnSP\\Laba1\\Laba1.csproj": {
+              "projectPath": "D:\\BSUIR\\course-2\\OOTPnSP\\Laba1\\Laba1.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net8.0": {
+        "targetAlias": "net8.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.AspNetCore.App": {
+            "privateAssets": "none"
+          },
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.201/PortableRuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "Version": 1,
+  "Hash": "PJPaMXW0a6kU/qLQrJwXv4G+r9lSV/hxNDJPX7cuSS0=",
+  "Source": "Laba2",
+  "BasePath": "_content/Laba2",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [
+    {
+      "Identity": "D:\\BSUIR\\course-2\\OOTPnSP\\Laba1\\Laba1.csproj",
+      "Version": 2,
+      "Source": "Laba1",
+      "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",
+      "AdditionalPublishProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework",
+      "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
+      "AdditionalBuildProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework"
+    }
+  ],
+  "DiscoveryPatterns": [
+    {
+      "Name": "Laba2\\wwwroot",
+      "Source": "Laba2",
+      "ContentRoot": "D:\\BSUIR\\course-2\\OOTPnSP\\Laba2\\wwwroot\\",
+      "BasePath": "_content/Laba2",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "D:\\BSUIR\\course-2\\OOTPnSP\\Laba2\\wwwroot\\index.html",
+      "SourceId": "Laba2",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\BSUIR\\course-2\\OOTPnSP\\Laba2\\wwwroot\\",
+      "BasePath": "_content/Laba2",
+      "RelativePath": "index.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\index.html"
+    },
+    {
+      "Identity": "D:\\BSUIR\\course-2\\OOTPnSP\\Laba2\\wwwroot\\script.js",
+      "SourceId": "Laba2",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\BSUIR\\course-2\\OOTPnSP\\Laba2\\wwwroot\\",
+      "BasePath": "_content/Laba2",
+      "RelativePath": "script.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\script.js"
+    },
+    {
+      "Identity": "D:\\BSUIR\\course-2\\OOTPnSP\\Laba2\\wwwroot\\style.css",
+      "SourceId": "Laba2",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\BSUIR\\course-2\\OOTPnSP\\Laba2\\wwwroot\\",
+      "BasePath": "_content/Laba2",
+      "RelativePath": "style.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\style.css"
+    }
+  ]
+}
