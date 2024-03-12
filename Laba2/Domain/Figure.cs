@@ -2,7 +2,7 @@
 
 namespace Laba2.Domain;
 
-internal abstract class Figure
+public abstract class Figure
 {
     protected Figure(double x, double y, double bottomSide, double leftSide, double angle)
     {

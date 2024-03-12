@@ -1,6 +1,6 @@
 ﻿namespace Laba2.Domain;
 
-internal class Rhombus : Figure
+public class Rhombus : Figure
 {
     public Rhombus(double x, double y, double side, double agile) : base(x, y, side, side, agile) { }
 

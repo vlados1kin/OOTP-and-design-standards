@@ -2,7 +2,7 @@
 
 namespace Laba2.Factories;
 
-internal class TriangleFactory : Factory
+public class TriangleFactory : Factory
 {
     public TriangleFactory(double x, double y, double bottomSide, double leftSide, double angle)
         : base(x, y, bottomSide, leftSide, angle) { }

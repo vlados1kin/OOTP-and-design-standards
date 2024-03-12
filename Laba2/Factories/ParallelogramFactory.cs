@@ -2,7 +2,7 @@
 
 namespace Laba2.Factories;
 
-internal class ParallelogramFactory : Factory
+public class ParallelogramFactory : Factory
 {
     public ParallelogramFactory(double x, double y, double bottomSide, double leftSide, double angle)
         : base(x, y, bottomSide, leftSide, angle) { }

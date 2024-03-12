@@ -31,3 +31,4 @@ D:\BSUIR\course-2\OOTPnSP\Laba2\bin\Debug\net8.0\Laba1.dll
 D:\BSUIR\course-2\OOTPnSP\Laba2\bin\Debug\net8.0\Laba1.pdb
 D:\BSUIR\course-2\OOTPnSP\Laba2\obj\Debug\net8.0\Laba2.csproj.AssemblyReference.cache
 D:\BSUIR\course-2\OOTPnSP\Laba2\obj\Debug\net8.0\Laba2.csproj.Up2Date
+D:\BSUIR\course-2\OOTPnSP\Laba2\obj\Debug\net8.0\Laba2.sourcelink.json

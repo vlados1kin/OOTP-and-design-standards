@@ -2,7 +2,7 @@
 
 namespace Laba2.Factories;
 
-internal abstract class Factory
+public abstract class Factory
 {
     protected Factory(double x, double y, double bottomSide, double leftSide, double angle)
     {

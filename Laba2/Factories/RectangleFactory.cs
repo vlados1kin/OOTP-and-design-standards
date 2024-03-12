@@ -2,7 +2,7 @@
 
 namespace Laba2.Factories;
 
-internal class RectangleFactory : Factory
+public class RectangleFactory : Factory
 {
     public RectangleFactory(double x, double y, double bottomSide, double leftSide)
         : base(x, y, bottomSide, leftSide, Math.PI / 2) { }

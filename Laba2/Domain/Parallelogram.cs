@@ -1,6 +1,6 @@
 ﻿namespace Laba2.Domain;
 
-internal class Parallelogram : Figure
+public class Parallelogram : Figure
 {
     public Parallelogram(double x, double y, double bottomSide, double leftSide, double angle) : base(x, y, bottomSide, leftSide, angle) { }
 

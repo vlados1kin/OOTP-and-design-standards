@@ -2,7 +2,7 @@
 
 namespace Laba2.Factories;
 
-internal class SquareFactory : Factory
+public class SquareFactory : Factory
 {
     public SquareFactory(double x, double y, double side)
         : base(x, y, side, side, Math.PI / 2) { }

@@ -1,6 +1,6 @@
 ﻿namespace Laba2.Domain;
 
-internal class Triangle : Figure
+public class Triangle : Figure
 {
     private double _thirdSide;
     public Triangle(double x, double y, double bottomSide, double leftSide, double angle)

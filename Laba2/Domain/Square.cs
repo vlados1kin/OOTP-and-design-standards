@@ -1,6 +1,6 @@
 ﻿namespace Laba2.Domain;
 
-internal class Square : Figure
+public class Square : Figure
 {
     public Square(double x, double y, double side) : base(x, y, side, side, Math.PI / 2) { }
 

@@ -1,6 +1,6 @@
 ﻿namespace Laba2.Domain;
 
-internal class Rectangle : Figure
+public class Rectangle : Figure
 {
     public Rectangle(double x, double y, double width, double height) : base(x, y, width, height, Math.PI / 2) { }
 

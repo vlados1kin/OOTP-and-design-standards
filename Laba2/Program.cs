@@ -5,38 +5,13 @@ namespace Laba2;
 
 public class Program
 {
-    private static List<string> Shapes =
-    [
-        new ParallelogramFactory(150, 250, 120, 200, Math.PI / 3).Draw(),
-        new TriangleFactory(450, 300, 80, 120, Math.PI / 2).Draw(),
-        new RectangleFactory(400, 400, 130, 90).Draw()
-    ];
-    private static Factory GetFactory(Shape shape)
+    private static Shapes _shapes = new Shapes(new List<Shape>(16)
     {
-        Factory factory;
-        switch (shape.TypeOfFactory)
-        {
-            case "parallelogram":
-                factory = new ParallelogramFactory(shape.X ?? 0, shape.Y ?? 0, shape.BottomSide ?? 0, shape.LeftSide ?? 0, shape.Angle ?? 0);
-                break;
-            case "rectangle":
-                factory = new RectangleFactory(shape.X ?? 0, shape.Y ?? 0, shape.BottomSide ?? 0, shape.LeftSide ?? 0);
-                break;
-            case "square":
-                factory = new SquareFactory(shape.X ?? 0, shape.Y ?? 0, shape.BottomSide ?? 0);
-                break;
-            case "rhombus":
-                factory = new RhombusFactory(shape.X ?? 0, shape.Y ?? 0, shape.BottomSide ?? 0, shape.Angle ?? 0);
-                break;
-            case "triangle":
-                factory = new TriangleFactory(shape.X ?? 0, shape.Y ?? 0, shape.BottomSide ?? 0, shape.LeftSide ?? 0, shape.Angle ?? 0);
-                break;
-            default:
-                throw new ArgumentException("Invalid type");
-        }
-        return factory;
-    }
-    
+        new Shape(new Parallelogram(150, 250, 120, 200, Math.PI / 3)) { TypeOfFactory = "parallelogram"},
+        new Shape(new Triangle(450, 300, 80, 120, Math.PI / 2)) { TypeOfFactory = "triangle"},
+        new Shape(new Rectangle(400, 400, 130, 90)) { TypeOfFactory = "rectangle"},
+        new Shape(new Square(600, 400, 150)) { TypeOfFactory = "square"},
+    });
     public static void Main()
     {
         var builder = WebApplication.CreateBuilder();
@@ -53,7 +28,15 @@ public class Program
             
             if (path == "/editor" && request.Method == "GET")
             {
-                await response.WriteAsJsonAsync(Shapes);
+                List<string> patterns = new List<string>(16);
+                for (int i = 0; i < _shapes.Length; i++)
+                {
+                    Shape shape = _shapes[i];
+                    Factory factory = shape.GetFactory();
+                    Figure figure = factory.Create();
+                    patterns.Add(factory.Draw(figure));
+                }
+                await response.WriteAsJsonAsync(patterns);
             } 
             else if (path == "/editor" && request.Method == "POST")
             {
@@ -62,11 +45,11 @@ public class Program
                     var shape = await request.ReadFromJsonAsync<Shape>();
                     if (shape != null)
                     {
-                        Factory factory = GetFactory(shape);
+                        Factory factory = shape.GetFactory();
                         Figure figure = factory.Create();
-                        var s = factory.Draw(figure);
-                        Shapes.Add(s);
-                        await response.WriteAsJsonAsync(s);
+                        var pattern = factory.Draw(figure);
+                        _shapes.Add(shape);
+                        await response.WriteAsJsonAsync(pattern);
                     }
                 }
                 catch
@@ -80,4 +63,69 @@ public class Program
     }
 }
 
-public record class Shape(double? X, double? Y, double? BottomSide, double? LeftSide, double? Angle, string TypeOfFactory);
+public class Shape
+{
+    public double X { get; init; }
+    public double Y { get; init; }
+    public double? BottomSide { get; init; }
+    public double? LeftSide { get; init; }
+    public double? Angle { get; init; }
+    public required string? TypeOfFactory { get; init; }
+    public Shape() { }
+
+    public Shape(Figure figure)
+    {
+        X = figure.X;
+        Y = figure.Y;
+        BottomSide = figure.BottomSide;
+        LeftSide = figure.LeftSide;
+        Angle = figure.Angle;
+    }
+
+    public Factory GetFactory()
+    {
+        Factory factory;
+        switch (TypeOfFactory)
+        {
+            case "parallelogram":
+                factory = new ParallelogramFactory(X, Y, BottomSide ?? 0, LeftSide ?? 0, Angle ?? 0);
+                break;
+            case "rectangle":
+                factory = new RectangleFactory(X, Y, BottomSide ?? 0, LeftSide ?? 0);
+                break;
+            case "square":
+                factory = new SquareFactory(X, Y, BottomSide ?? 0);
+                break;
+            case "rhombus":
+                factory = new RhombusFactory(X, Y, BottomSide ?? 0, Angle ?? 0);
+                break;
+            case "triangle":
+                factory = new TriangleFactory(X, Y, BottomSide ?? 0, LeftSide ?? 0, Angle ?? 0);
+                break;
+            default:
+                throw new ArgumentException("Invalid type");
+        }
+        return factory;
+    }
+}
+
+public class Shapes
+{
+    private List<Shape> _shapes;
+    public Shapes(List<Shape> shapes) => _shapes = shapes;
+    public void Add(Shape shape) => _shapes.Add(shape);
+    public int Length => _shapes.Count;
+    public Shape this[int index]
+    {
+        get => index >= 0 && index < _shapes.Count
+            ? _shapes[index]
+            : throw new IndexOutOfRangeException("Invalid index");
+        set
+        {
+            if (index >= 0 && index < _shapes.Count)
+                _shapes[index] = value;
+            else
+                throw new IndexOutOfRangeException("Invalid index");
+        }
+    }
+}

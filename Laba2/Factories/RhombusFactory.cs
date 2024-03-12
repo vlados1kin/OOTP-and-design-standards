@@ -2,7 +2,7 @@
 
 namespace Laba2.Factories;
 
-internal class RhombusFactory : Factory
+public class RhombusFactory : Factory
 {
     public RhombusFactory(double x, double y, double side, double angle)
         : base(x, y, side, side, angle) { }
