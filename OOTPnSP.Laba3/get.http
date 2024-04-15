@@ -1,0 +1,6 @@
+@OOTPnSP.Laba3_HostAddress = http://localhost:5237
+
+GET {{OOTPnSP.Laba3_HostAddress}}/editor/
+Accept: application/json
+
+###

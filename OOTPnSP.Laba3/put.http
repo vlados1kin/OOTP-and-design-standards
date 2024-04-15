@@ -1,0 +1,14 @@
+@a = http://localhost:5235
+
+PUT {{a}}/editor/10
+Content-Type: application/json
+
+{
+  "id": 10,
+  "x": 100,
+  "y": 200,
+  "bottomSide": 40,
+  "leftSide": 30,
+  "angle": 30,
+  "typeOfFactory": "parallelogram"
+}

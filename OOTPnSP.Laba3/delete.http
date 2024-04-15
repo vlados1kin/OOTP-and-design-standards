@@ -1,0 +1,6 @@
+@a = http://localhost:5235
+
+DELETE {{a}}/editor/2
+Content-Type: application/json
+
+###
