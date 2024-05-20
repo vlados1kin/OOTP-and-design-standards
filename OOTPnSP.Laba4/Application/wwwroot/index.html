@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Лабораторная работа 4</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    ГРАФИЧЕСКИЙ РЕДАКТОР
+</header>
+<div class="shape">
+    <div class="menu">
+        <table>
+            <tr>
+                <td class="td-head">СОЗДАНИЕ<br>ФИГУРЫ</td>
+            </tr>
+            <tr>
+                <td>
+                    <select id="figure"></select>
+                </td>
+            </tr>
+            <tr>
+                <td><input id="bottomSide" placeholder="Нижняя сторона"></td>
+            </tr>
+            <tr>
+                <td><input id="leftSide" placeholder="Левая сторона"></td>
+            </tr>
+            <tr>
+                <td>
+                    <input id="angle" placeholder="Угол">
+                </td>
+            </tr>
+            <tr>
+                <td><button id="clear">Очистить</button></td>
+            </tr>
+            <tr>
+                <td><button id="save">Сохранить файл</button></td>
+            </tr>
+            <tr>
+                <input id="plugin" type="file" style="display: none">
+                <td><button id="plugin-upload">Выбрать плагин</button></td>
+            </tr>
+            <tr>
+                <td><button id="send">Загрузить плагин</button></td>
+            </tr>
+            <tr>
+                <td><button id="sign">Проверить подпись</button></td>
+            </tr>
+            <tr class="td-shape">         
+                <td><input id="id" placeholder="ID фигуры" style="width: 80px"></td>  
+                <td><button id="update">Изм</button></td>
+                <td><button id="delete">Удл</button></td>
+            </tr>
+            <tr id="shape-list" class="shape-list">
+                
+            </tr>
+        </table>
+    </div>
+    <div class="svg">
+        <svg id="svg"></svg>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
