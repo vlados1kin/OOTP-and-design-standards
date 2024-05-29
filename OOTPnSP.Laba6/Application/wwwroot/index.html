@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Лабораторная работа 5</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    ГРАФИЧЕСКИЙ РЕДАКТОР
+</header>
+<div class="shape">
+    <div class="header">
+        <input id="openFigures" type="file" accept=".json, .xml, .data, .gz" style="display: none" >
+        <input id="plugin" type="file" accept=".dll" style="display: none">
+        <button id="open">Открыть файл с фигурами</button>
+        <button id="loadFigures">Загрузить файл с фигурами</button>
+        <button id="plugin-upload">Выбрать плагин</button>
+        <button id="send">Загрузить плагин</button>
+        <button id="sign">Проверить подпись плагина</button>
+        <button id="settings">Настройки</button>
+    </div>
+</div>
+<div class="shape">
+    <div class="header">
+        <input id="path" placeholder="Путь к файлу" style="width: 500px">
+        <button id="path-submit">Конвертировать</button>
+    </div>
+</div>        
+<dialog>
+    <table>
+        <th>
+            Настройка плагинов
+        </th>
+        <tr>
+            <td><input type="text" id="key" placeholder="Ключ шифрования"></td>
+        </tr>
+        <tr style="display: flex; justify-content: space-between">
+            <td><button id="send-settings">Подтвердить</button></td>
+            <td><button id="close-dialog">Закрыть</button></td>
+        </tr>
+    </table>
+</dialog>
+<div class="shape">
+    <div class="menu">
+        <table>
+            <tr>
+                <td class="td-head">СОЗДАНИЕ<br>ФИГУРЫ</td>
+            </tr>
+            <tr>
+                <td><select id="figure"></select></td>
+            </tr>
+            <tr>
+                <td><input id="bottomSide" placeholder="Нижняя сторона"></td>
+            </tr>
+            <tr>
+                <td><input id="leftSide" placeholder="Левая сторона"></td>
+            </tr>
+            <tr>
+                <td><input id="angle" placeholder="Угол"></td>
+            </tr>
+            <tr>
+                <td><button id="clear">Очистить</button></td>
+            </tr>
+            <tr>
+                <td><button id="save">Сохранить в файл</button></td>
+            </tr>
+            <tr class="td-shape">         
+                <td><input id="id" placeholder="ID фигуры" style="width: 80px"></td>  
+                <td><button id="update">Изм</button></td>
+                <td><button id="delete">Удл</button></td>
+            </tr>
+            <tr id="shape-list" class="shape-list">
+                
+            </tr>
+        </table>
+    </div>
+    <div class="svg">
+        <svg id="svg"></svg>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
